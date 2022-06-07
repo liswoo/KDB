@@ -1,0 +1,38 @@
+package dart;
+
+import java.util.ArrayList;
+
+public class Control {
+
+	public static void main(String[] args) {
+		
+		GetTotalPage gt = new GetTotalPage();
+		int totalPageNum = gt.totalPage("20200101", "20200102");
+		
+		
+		for(int i = 1;  i <=totalPageNum; i++) {
+			
+			
+			String bgn_de="20200101"; // 시작일
+	    	String end_de="20200102"; // 종료일
+	    	int page_no =i; // 페이지 번호
+	    	String page_count ="100"; // 페이지 별 건수
+		    
+		    // 데이터를 얻어오는 객체를 생성
+	    	DartJson dartjson = new DartJson();
+			
+	    	
+	    	// 데이터를 JSON형태로 받아 Dart_PA에 저장
+			 ArrayList<DartVo> dartvo = dartjson.getDartVo(bgn_de, end_de, page_no, page_count);
+			 
+			
+			// 데이터베이스에 접속에 관련하는객체를 만들고 데이터베이스에 입력
+			DartDao dartdao = new DartDao();
+			dartdao.insertdb(dartvo);
+			
+		}
+		
+		
+	}
+
+}
