@@ -79,13 +79,13 @@ final static String crtfc_key = "825e41d4f19edb65d48bad6ab83fffa58af8ba18";
      			
      			System.out.println("배열의 "+i+"번째 요소");
      			System.out.println("고유번호 : "+ corp_code);
-     			System.out.println("회사이름 : "+ flr_nm);
-     			System.out.println("종목명(법인명) : "+ corp_name);
-     			System.out.println("종목코드 : "+ stock_code);
-     			System.out.println("법인구분 : "+ corp_cls);
-     			System.out.println("보고서명 : "+ report_nm);
-     			System.out.println("접수일자 : "+ rcept_dt);
-     			System.out.println("비고 : "+ rm);
+     			System.out.println("rcept_no : "+ rcept_no);
+//     			System.out.println("종목명(법인명) : "+ corp_name);
+//     			System.out.println("종목코드 : "+ stock_code);
+//     			System.out.println("법인구분 : "+ corp_cls);
+//     			System.out.println("보고서명 : "+ report_nm);
+//     			System.out.println("접수일자 : "+ rcept_dt);
+//     			System.out.println("비고 : "+ rm);
      			System.out.println("---------------");
      			
      			
