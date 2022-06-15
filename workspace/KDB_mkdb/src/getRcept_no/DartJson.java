@@ -1,19 +1,13 @@
 package getRcept_no;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.List;
-
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 
-import getData.Dart_PA;
 
 public class DartJson {
 
@@ -43,8 +37,6 @@ final static String crtfc_key = "825e41d4f19edb65d48bad6ab83fffa58af8ba18";
          while((line=bf.readLine())!=null){ //bf 에 있는값을 읽어와서 하나의 문자열로 만듭니다.
              result=result.concat(line);
          }
-         //result 출력해보기
-        System.out.println(result);
          
          //문자열을 JSON으로 파싱합니다. 마지막 배열형태로 저장된 데이터까지 파싱해냅니다.
          JSONParser jsonParser = new JSONParser();
@@ -53,14 +45,11 @@ final static String crtfc_key = "825e41d4f19edb65d48bad6ab83fffa58af8ba18";
          //total count
          int total_page = Integer.parseInt(String.valueOf(jsonObj.get("total_page")));
          this.total_page = total_page;
-         System.out.println(this.total_page);
          
          JSONArray parse_list = (JSONArray) jsonObj.get("list");
          
          //System.out.println(total_count);
  		JSONObject obj;
- 		
- 		
      		
  		// 데이터 가져오기.
      		for(int i = 0 ; i < parse_list.size(); i++)
@@ -77,29 +66,13 @@ final static String crtfc_key = "825e41d4f19edb65d48bad6ab83fffa58af8ba18";
      			String rcept_dt = (String)obj.get("rcept_dt");
      			String rm = (String)obj.get("rm");
      			
-     			System.out.println("배열의 "+i+"번째 요소");
-     			System.out.println("고유번호 : "+ corp_code);
-     			System.out.println("회사이름 : "+ flr_nm);
-     			System.out.println("종목명(법인명) : "+ corp_name);
-     			System.out.println("종목코드 : "+ stock_code);
-     			System.out.println("법인구분 : "+ corp_cls);
-     			System.out.println("보고서명 : "+ report_nm);
-     			System.out.println("접수일자 : "+ rcept_dt);
-     			System.out.println("비고 : "+ rm);
-     			System.out.println("---------------");
-     			
      			
      			pList.add(new DartVo(corp_cls,corp_name,corp_code,stock_code,report_nm,rcept_no,flr_nm,rcept_dt,rm));
      			
-     		
-     			
-     			
      		}bf.close();
-     		
      		 
      }catch(Exception e){
          System.out.println(e.getMessage());
-     
 }
      return(pList);
 }

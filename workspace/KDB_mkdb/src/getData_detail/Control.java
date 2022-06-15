@@ -22,7 +22,11 @@ public class Control {
 		2022.04.01 ~ 2022.06.30	70321
 		*/
 		
+		String start_day ="20200101";
+		String end_day ="20200331";
+		
 		ArrayList<String> arr = new ArrayList<String>(); 
+		
 		arr.add("A001");
 		arr.add("A002");
 		arr.add("A003");
@@ -82,23 +86,12 @@ public class Control {
 		arr.add("J006");
 		arr.add("J008");
 		
-		
-		String start_day ="20200101";
-		String end_day ="20200331";
-		//String pblntf_detail_ty = "A001";
-		
-		
-
-		
 			for(int j = 0 ; j < arr.size(); j++) {
-				
 			
 			GetTotalPage gt = new GetTotalPage();
 			int totalPageNum = gt.totalPage(start_day, end_day, arr.get(j));
 			
-			
 			for(int i = 1;  i <=totalPageNum; i++) {
-				
 				
 				String bgn_de=start_day; // 시작일
 		    	String end_de=end_day; // 종료일
@@ -107,19 +100,12 @@ public class Control {
 			    
 			    // 데이터를 얻어오는 객체를 생성
 		    	DartJson dartjson = new DartJson();
-				
-		    	
 		    	// 데이터를 JSON형태로 받아 Dart_Vo에 저장
-				 ArrayList<DartVo> dartvo = dartjson.getDartVo(bgn_de, end_de, page_no, page_count, arr.get(j));
-				 
-				
+		    	ArrayList<DartVo> dartvo = dartjson.getDartVo(bgn_de, end_de, page_no, page_count, arr.get(j));
 				// 데이터베이스에 접속에 관련하는객체를 만들고 데이터베이스에 입력
 				DartDao dartdao = new DartDao();
 				dartdao.insertdb(dartvo);
-				
 			}
-		
 		}
 	}
-
 }
