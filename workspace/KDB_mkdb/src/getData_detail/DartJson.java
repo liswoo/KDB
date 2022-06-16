@@ -44,7 +44,7 @@ final static String crtfc_key = "825e41d4f19edb65d48bad6ab83fffa58af8ba18";
          JSONParser jsonParser = new JSONParser();
          JSONObject jsonObj = (JSONObject) jsonParser.parse(result);
          
-         //total count
+         //total page count
          int total_page = Integer.parseInt(String.valueOf(jsonObj.get("total_page")));
          this.total_page = total_page;
          
