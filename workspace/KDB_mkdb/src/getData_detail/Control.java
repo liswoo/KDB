@@ -22,8 +22,8 @@ public class Control {
 		2022.04.01 ~ 2022.06.30	70321
 		*/
 		
-		String start_day ="20201201";
-		String end_day ="20201231";
+		String start_day ="20220401";
+		String end_day ="20220430";
 		
 		ArrayList<String> arr = new ArrayList<String>(); 
 		
