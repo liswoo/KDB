@@ -23,7 +23,7 @@ public class Control {
 		*/
 
 		String start_day ="20200101";
-		String end_day ="20200105";
+		String end_day ="20200131";
 		
 		GetTotalPage gt = new GetTotalPage();
 		int totalPageNum = gt.totalPage(start_day, end_day);

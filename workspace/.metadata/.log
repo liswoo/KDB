@@ -6063,3 +6063,9 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 4 4 2022-06-20 11:21:25.996
+!MESSAGE Plugin egovframework.dev.imp.dbio, extension org.eclipse.ui.perspectiveExtensions, id egovframework.dev.imp.dbio.view.dbioSearch: Attribute 'relative' not defined.  This attribute is required when relationship="stack".
+
+!ENTRY org.eclipse.ui 4 4 2022-06-20 11:21:25.997
+!MESSAGE Unable to process element: view in perspective extension: null

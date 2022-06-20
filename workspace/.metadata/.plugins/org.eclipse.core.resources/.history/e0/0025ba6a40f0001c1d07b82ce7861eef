@@ -33,7 +33,7 @@ public class DartDao {
 					+ "crtfc_key=825e41d4f19edb65d48bad6ab83fffa58af8ba18"
 					+ "&rcept_no="+rcept_no;
 			
-	        String outputDir = "C:\\Users\\woosd\\Desktop\\DartFiles";
+	        String outputDir = "C:\\Users\\woosd\\Desktop\\testfile";
 	        InputStream is = null;
 	        FileOutputStream os = null;
 	        try{
