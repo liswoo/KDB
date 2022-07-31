@@ -1,0 +1,8 @@
+show variables like '%timeout%';
+
+
+set global wait_timeout=5;
+set global interactive_timeout=5;
+
+set global wait_timeout=20000;
+set global interactive_timeout=20000;
